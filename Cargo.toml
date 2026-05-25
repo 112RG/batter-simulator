@@ -1,0 +1,13 @@
+[package]
+name = "battery-simulator"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+axum = "0.8.9"
+serde = { version = "1.0", features = ["derive"] }
+tokio = {version = "1.52.3", features =  ["full"]}
+tower = "0.5.2"
+tower-http = {version = "0.6.2", features = ["trace"] }
+tracing = "0.1.41"
+tracing-subscriber = { version = "0.3.19", features=["env-filter"] }
