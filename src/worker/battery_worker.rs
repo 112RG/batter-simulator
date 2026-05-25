@@ -4,6 +4,7 @@ use chrono::Utc;
 use tokio::time::{MissedTickBehavior, interval};
 use tokio_util::sync::CancellationToken;
 use tracing::info;
+
 pub async fn battery_worker(shutdown: CancellationToken) -> anyhow::Result<()> {
     let mut tick = interval(Duration::from_secs(1));
     tick.set_missed_tick_behavior(MissedTickBehavior::Skip);
